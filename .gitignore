@@ -1,0 +1,9 @@
+# .gitignore 파일 내용
+
+.venv/
+.env
+
+# 기타 파이썬/IDE 관련 무시할 파일 추가 (필요시)
+__pycache__/
+*.pyc
+.vscode/
