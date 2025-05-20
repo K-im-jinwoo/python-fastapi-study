@@ -25,7 +25,7 @@ async def execute_procedure_query_async(
             else:
                 cursor.execute(sql)
             
-            columns = [columns[0] for column in cursor.description]
+            columns = [column[0] for column in cursor.description]
             results = []
             rows = cursor.fetchall()
 
