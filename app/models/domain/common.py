@@ -1,16 +1,16 @@
 from pydantic import BaseModel, Field
 
 class RecentYear(BaseModel):
-    YearValue: str = Field(alias="코드")
-    Year: str = Field(alias="코드명")
+    year_value: str = Field(alias="코드")
+    year: str = Field(alias="코드명")
 
     class Config:
         from_attributes = True
 
 class CurrentRecruitData(BaseModel):
-    CurrentYear: str = Field(alias="mojib_yy")
-    RecruitCategoryValue: str = Field(alias="mojib_gb")
-    RecruitCategoryNM: str = Field(alias="mojib_gb_nm")
+    current_year: str = Field(alias="mojib_yy")
+    recruit_category_value: str = Field(alias="mojib_gb")
+    recruit_category_name: str = Field(alias="mojib_gb_nm")
 
     class Config:
         from_attributes = True
