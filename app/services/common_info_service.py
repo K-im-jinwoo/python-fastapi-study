@@ -13,11 +13,11 @@ class CommonInfoService():
         self.common_info_repo = common_info_repo 
 
     async def get_available_years(self, p1:str) -> List[RecentYear]:
-        year_list_data = await self.common_info_repo.get_year_list()
+        year_list_data = await self.common_info_repo.get_year_list(p1)
 
         return year_list_data #
 
     async def get_current_recruit_details(self, ibhag_gb:str) -> Optional[CurrentRecruitData]:
-        recruit_info_data = await self.common_info_repo.get_current_recruit_info()
+        recruit_info_data = await self.common_info_repo.get_current_recruit_info(ibhag_gb)
 
-        return recruit_info_data 
+        return recruit_info_data  

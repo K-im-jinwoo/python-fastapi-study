@@ -19,7 +19,7 @@ class CommonInfoRepository():
 
     # ICommonInfoRepository 인터페이스의 get_year_list 메서드
     # 년도 목록을 가져오는 프로시저를 호출
-    async def get_year_list(self) -> List[RecentYear]:
+    async def get_year_list(self, p1:str) -> List[RecentYear]:
         procedure_name = "uwindb1.입학행정_입시관리학부_기준정보관리_최근모집년도목록" 
         parameters = (p1,) 
 
@@ -35,7 +35,7 @@ class CommonInfoRepository():
 
     # ICommonInfoRepository 인터페이스의 get_current_recruit_info 메서
     # 현재 모집 정보를 가져오는 프로시저를 호출합니다.
-    async def get_current_recruit_info(self) -> Optional[CurrentRecruitData]:
+    async def get_current_recruit_info(self, ibhag_gb:str) -> Optional[CurrentRecruitData]:
         procedure_name = "uwindb1.입학행정_입시관리학부_기준정보관리_현재모집년도모집구분" 
         parameters = (ibhag_gb,)
 
